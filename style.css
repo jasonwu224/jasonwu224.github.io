@@ -1,36 +1,59 @@
 /* style.css */
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     background-color: #ffffff;
-    color: #333;
+    color: #000;
 }
 
-header {
-    background-color: #f9f9f9;
-    padding: 2rem 1rem;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-sizing: border-box;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+/* vertical divider covering 75% of viewport height, centered */
+.sidebar::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12.5%;
+    height: 75%;
+    width: 1px;
+    background-color: #000;
 }
 
-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-    color: #666;
+.site-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+}
+
+.sidebar a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
 main {
+    margin-left: 180px;
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 2rem;
 }
 
 section {
@@ -38,26 +61,15 @@ section {
 }
 
 h2 {
-    color: #222;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
+    color: #000;
 }
 
 ul {
     padding-left: 1.2rem;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-    font-size: 0.9rem;
-    color: #666;
-}
-
 a {
-    color: #007acc;
+    color: #000;
     text-decoration: none;
 }
 
